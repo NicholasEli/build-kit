@@ -1,10 +1,10 @@
 {
   "name": "build-kit",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "authors": [
-    "Nicholas By Design"
+    "PAIRODIME"
   ],
-  "description": "Static project build kit.",
+  "description": "Delightful set of Front End tools for our web development",
   "license": "MIT",
   "private": true,
   "ignore": [
@@ -20,7 +20,7 @@
   "dependencies": {
     "fastclick": "~1.0.6",
     "jquery": "~2.1.4",
-    "modernizr": "~3.1.0",
+    "modernizr": "http://modernizr.com/download/?-animation-audio-backgroundcliptext-backgroundsize-canvas-cssanimations-csscalc-csstransforms3d-csstransitions-filereader-flexbox-fontface-fullscreen-geolocation-hashchange-inlinesvg-json-localstorage-svg-svgclippaths-video-shiv.zip",
     "fontawesome": "~4.4.0"
   }
 }

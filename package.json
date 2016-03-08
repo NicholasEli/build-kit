@@ -1,7 +1,7 @@
 {
   "name": "gulp-starter",
-  "version": "1.0.2",
-  "description": "Static project build kit.",
+  "version": "1.0.3",
+  "description": "Delightful Web Development Tools for building the internet.",
   "main": "gulpfile.js",
   "dependencies": {
     "gulp-autoprefixer": "^3.1.0",
@@ -12,12 +12,14 @@
   },
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.1.0",
     "gulp-sass": "^2.0.4",
     "gulp-uglify": "^1.4.2",
     "gulp-uglifycss": "^1.0.4",
-    "susy": "^2.2.6"
+    "gulp-autoprefixer": "^3.1.0",
+    "susy": "^2.2.6",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sourcemaps": "^1.6.0"
   },
-  "author": "Nicholas By Design",
+  "author": "PAIRODIME",
   "license": "MIT"
 }
