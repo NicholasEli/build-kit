@@ -7,16 +7,12 @@ $susy: (
    gutter-position: inside,
 );
 
-// Brand Colors
-$brand-color: #B3740D;
-
-
-// Global Active Link Color - best to use a variable from Brand Colors
-$active-color: $brand-color;
-
-a {
-   color: $active-color;
-}
+//media queries
+$phone: 480px;
+$lgPhone: 600px;
+$tablet: 768px;
+$desktop: 960px;
+$final: 1024px;
 
 .container{
    @include container();

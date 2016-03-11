@@ -83,7 +83,7 @@ h2{
    line-height: 39px;
 }
 
-h3{
+h3, thead td{
    font-size: 24px;
    line-height: 36px;
 }
@@ -104,7 +104,7 @@ h6{
 }
 
 p, li, a,
-td{
+td, address{
    font-size: 14px;
    line-height: 21px;
 }
