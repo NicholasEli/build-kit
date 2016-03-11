@@ -20,7 +20,6 @@
   "dependencies": {
     "fastclick": "~1.0.6",
     "jquery": "~2.1.4",
-    "modernizr": "~3.1.0",
     "fontawesome": "~4.4.0"
   }
 }

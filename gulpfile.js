@@ -3,7 +3,9 @@ var gulp 			 	= require('gulp'),
 	uglify 			 	= require('gulp-uglify'),
 	uglifycss 	 		= require('gulp-uglifycss'),
 	autoprefixer 		= require('gulp-autoprefixer'),
-	sass 			   	= require('gulp-sass');
+	sass 			   	= require('gulp-sass'),
+	gulp = require("gulp"),
+	babel = require("gulp-babel");;
 
 gulp.task('js', function() {
   	return gulp.src('js/*.js')
@@ -34,6 +36,12 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('css'));
 });
 
+gulp.task("babel", function () {
+  return gulp.src("babel/script.js")
+    .pipe(babel())
+    .pipe(gulp.dest("js"));
+});
+
 
 //set default task
 gulp.task('default', function(){
@@ -41,6 +49,7 @@ gulp.task('default', function(){
 });
 
 // Auto Watch
-gulp.task('watch', ['sass'], function () {
+gulp.task('watch', ['sass', 'babel'], function () {
    gulp.watch('css/scss/*.scss', ['sass']);
+	gulp.watch('babel/script.js', ['babel']);
 });
