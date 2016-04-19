@@ -16,7 +16,8 @@
     "gulp-sass": "^2.0.4",
     "gulp-uglify": "^1.4.2",
     "gulp-uglifycss": "^1.0.4",
-    "susy": "^2.2.6"
+    "susy": "^2.2.6",
+    "move-jg" : "^0.5.0"
   },
   "author": "Nicholas By Design",
   "license": "MIT"
