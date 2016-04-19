@@ -4,8 +4,8 @@ var gulp 			 	= require('gulp'),
 	uglifycss 	 		= require('gulp-uglifycss'),
 	autoprefixer 		= require('gulp-autoprefixer'),
 	sass 			   	= require('gulp-sass'),
-	gulp = require("gulp"),
-	babel = require("gulp-babel");;
+	gulp              = require("gulp"),
+	babel             = require("gulp-babel");;
 
 gulp.task('js', function() {
   	return gulp.src('js/*.js')
