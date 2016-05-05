@@ -11,13 +11,16 @@
     "gulp-sass": "^2.0.4"
   },
   "devDependencies": {
+    "babel-preset-stage-3": "^6.5.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^6.1.2",
     "gulp-sass": "^2.0.4",
     "gulp-uglify": "^1.4.2",
     "gulp-uglifycss": "^1.0.4",
-    "susy": "^2.2.6",
-    "move-jg" : "^0.5.0"
+    "move-js": "^0.5.0",
+    "pug": "^2.0.0-alpha6",
+    "susy": "^2.2.6"
   },
   "author": "Nicholas By Design",
   "license": "MIT"

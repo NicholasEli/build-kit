@@ -11,8 +11,8 @@ $hostname = getenv('HTTP_HOST');
       <!-- img placeholder
          <img src="http://placehold.it/350x150">
       -->
-
-
-    <?php include 'components/scripts.php'; ?>
+      <h1>HELLO WORLD</h1>
+      <p>Paragraph tag</p>
+     <?php include 'components/scripts.php'; ?>
     </body>
 </html>
