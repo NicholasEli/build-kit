@@ -5,7 +5,7 @@ var gulp 			= require('gulp'),
     	autoprefixer 	= require('gulp-autoprefixer'),
 	jsonToSass 	= require('gulp-json-to-sass')
    	sass 		= require('gulp-sass'),
-	gulp           = require("gulp"),
+	pug 			= require('gulp-pug'),
 	babel          = require("gulp-babel");
 
 gulp.task('js', function() {
@@ -41,6 +41,11 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('css'));
 });
 
+gulp.task('build', function build() {
+  return gulp.src('views/pug/*.pug')
+    .pipe(gulp.dest('views'));
+});
+
 gulp.task("babel", function () {
   return gulp.src("babel/*.js")
     .pipe(babel())
@@ -53,7 +58,8 @@ gulp.task('default', function(){
 });
 
 // Auto Watch
-gulp.task('watch', ['sass', 'babel'], function () {
+gulp.task('watch', ['sass', 'babel', 'build'], function () {
 	gulp.watch('css/scss/*.scss', ['sass']);
+	gulp.watch('views/pug/*.pug', ['build']);
 	gulp.watch('babel/*.js', ['babel']);
 });
