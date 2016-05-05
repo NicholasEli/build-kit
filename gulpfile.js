@@ -3,6 +3,7 @@ var gulp 			= require('gulp'),
 	uglify 		= require('gulp-uglify'),
     	uglifycss 	= require('gulp-uglifycss'),
     	autoprefixer 	= require('gulp-autoprefixer'),
+	jsonToSass 	= require('gulp-json-to-sass')
    	sass 		= require('gulp-sass'),
 	gulp           = require("gulp"),
 	babel          = require("gulp-babel");
@@ -30,6 +31,10 @@ gulp.task('sass', function () {
     .pipe(sass({
         includePaths: ['node_modules/susy/sass']
      }))
+	.pipe(jsonToSass({
+          jsonPath: 'js/style.json',
+          scssPath: 'css/scss/_variables.scss'
+     }))
     .pipe(sass().on('error', sass.logError))
     .pipe(sass({outputStyle: 'expanded'}))
     .pipe(autoprefixer())
@@ -42,14 +47,13 @@ gulp.task("babel", function () {
     .pipe(gulp.dest("js"));
 });
 
-
 //set default task
 gulp.task('default', function(){
 
 });
 
 // Auto Watch
-gulp.task('watch', ['babel'], function () {
-	//gulp.watch('css/scss/*.scss', ['sass']);
+gulp.task('watch', ['sass', 'babel'], function () {
+	gulp.watch('css/scss/*.scss', ['sass']);
 	gulp.watch('babel/*.js', ['babel']);
 });
