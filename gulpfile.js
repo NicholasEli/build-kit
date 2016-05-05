@@ -43,6 +43,7 @@ gulp.task('sass', function () {
 
 gulp.task('build', function build() {
   return gulp.src('views/pug/*.pug')
+    .pipe(pug())
     .pipe(gulp.dest('views'));
 });
 
