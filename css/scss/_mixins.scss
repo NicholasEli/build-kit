@@ -1,0 +1,5 @@
+@mixin container{
+	width: 100%;
+	max-width: $final;
+	padding: 15px;
+}

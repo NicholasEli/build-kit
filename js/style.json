@@ -1,7 +1,0 @@
-{
-     "phone"   : "480px" , 
-     "lgPhone" : "600px", 
-     "tablet"  : "768px",
-     "desktop" : "960px",
-     "final"   : "1024px"
-}

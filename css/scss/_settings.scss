@@ -1,17 +1,1 @@
-$susy: (
-   container: $final,
-   columns: 12,
-   gutters: 1/4,
-   math: fluid,
-   output: float,
-   gutter-position: inside,
-);
-
-.container{
-   @include container();
-   padding: 15px;
-
-   @media (min-width: $final){
-      padding: 15px 0px;
-   }
-}
+//block__element--modifier

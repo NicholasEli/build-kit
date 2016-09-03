@@ -1,12 +1,11 @@
-//get gulp node package
-var gulp 			= require('gulp'),
-	uglify 		= require('gulp-uglify'),
-    	uglifycss 	= require('gulp-uglifycss'),
-    	autoprefixer 	= require('gulp-autoprefixer'),
-	jsonToSass 	= require('gulp-json-to-sass')
-   	sass 		= require('gulp-sass'),
-	pug 			= require('gulp-pug'),
-	babel          = require("gulp-babel");
+var gulp 		 = require('gulp'),
+	uglify 		 = require('gulp-uglify'),
+    uglifycss 	 = require('gulp-uglifycss'),
+    autoprefixer = require('gulp-autoprefixer'),
+   	sass 		 = require('gulp-sass'),
+	pug 		 = require('gulp-pug'),
+    concat       = require('gulp-concat');
+	babel        = require("gulp-babel");
 
 gulp.task('js', function() {
   	return gulp.src('js/*.js')
@@ -28,13 +27,6 @@ gulp.task('prefix', function () {
 
 gulp.task('sass', function () {
   gulp.src('css/scss/*.scss')
-    .pipe(sass({
-        includePaths: ['node_modules/susy/sass']
-     }))
-	.pipe(jsonToSass({
-          jsonPath: 'js/style.json',
-          scssPath: 'css/scss/_variables.scss'
-     }))
     .pipe(sass().on('error', sass.logError))
     .pipe(sass({outputStyle: 'expanded'}))
     .pipe(autoprefixer())
@@ -50,6 +42,7 @@ gulp.task('build', function build() {
 gulp.task("babel", function () {
   return gulp.src("babel/*.js")
     .pipe(babel())
+    .pipe(concat('script.js'))
     .pipe(gulp.dest("js"));
 });
 
