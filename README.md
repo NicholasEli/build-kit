@@ -7,12 +7,9 @@
 <img src="http://placehold.it/350x150">
 - Declare your own width and height in image url
 
-
-#Base path to project
-- $hostname = getenv('HTTP_HOST');
-
 #Node Packages
-- Basic npm install
+- Babel
+- Sass
+- Gulp Concat
+- Pug
 
-#Bower Packages
-- Basic bower install
