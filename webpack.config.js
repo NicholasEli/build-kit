@@ -27,9 +27,6 @@ module.exports = {
             loaders: ['style-loader' ,'css-loader' ,'sass-loader']
         }]
     },
-    sassLoader: {
-        includePaths: [path.resolve(__dirname, './sass')]
-    },
     plugins: debug ? [] : [
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.OccurenceOrderPlugin(),
