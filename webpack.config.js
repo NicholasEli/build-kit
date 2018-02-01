@@ -6,16 +6,16 @@ var webpack = require('webpack');
 module.exports = {
     context: __dirname,
     devtool: debug ? 'inline-sourcemap' : null,
-    entry: './babel/script.js',
+    entry: './client/app.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'script.js'
+        filename: 'app.js'
     },
     module: {
         loaders: [{
             test: /\.js?$/,
             exclude: /(node_modules|bower_components)/,
-            include: [path.resolve(__dirname, 'babel/script.js')],
+            include: [path.resolve(__dirname, 'client')],
             loader: 'babel-loader',
             query: {
                 presets: ['react', 'es2015', 'stage-3'],
